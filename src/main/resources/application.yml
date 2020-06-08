@@ -1,0 +1,47 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://localhost:3306/zxf?serverTimezone=UTC
+    username: root
+    password: root
+
+    # 使用druid数据源
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+
+  redis:
+    host: 192.168.1.69
+    port: 6379
+    timeout: 3000
+    password: ycredis
+    pool:
+      minIdle: 1
+      maxIdle: 10
+      maxWait: 3
+      maxActive: 8
+
+  jpa:
+    show-sql: true
+
+  rabbitmq:
+    host: 192.168.1.69
+    port: 5672
+    username: admin
+    password: 123456
+    virtual-host: /
+    connection-timeout: 3000
