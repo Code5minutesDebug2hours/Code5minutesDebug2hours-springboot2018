@@ -44,4 +44,4 @@ spring:
     username: admin
     password: 123456
     virtual-host: /
-    connection-timeout: 3000
+    connection-timeout: 30000
