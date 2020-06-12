@@ -44,6 +44,7 @@ public class TestController {
             userService.createUser(new User(null,"zxf1","123"));
         }
         User user = userService.findByPwd("123456");
+        User user1 = userService.getUserByIdEnd(1L);
         return userService.getAllUser();
     }
 }

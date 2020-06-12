@@ -20,4 +20,9 @@ public interface UserDao extends PagingAndSortingRepository<User,Long>,
 
      @Query(value = "select t from User t where user_name = :name")
      User getByPassName(String name);
+
+     /**
+      * Hibernate: select user0_.id as id1_0_, user0_.pass_word as pass_wor2_0_, user0_.user_name as user_nam3_0_ from user user0_ where user0_.id>? limit ?
+      * spring data jpa 支持自定义方法映射*/
+     User getFirstByIdAfter(Long s);
 }

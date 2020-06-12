@@ -18,4 +18,6 @@ public interface UserService {
     User findByName(String name);
 
     User createUser(User user);
+
+    User getUserByIdEnd(Long s);
 }

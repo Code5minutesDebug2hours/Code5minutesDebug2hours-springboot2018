@@ -51,4 +51,9 @@ public class UserServiceImpl implements UserService {
     public User createUser(User user) {
         return userDao.save(user);
     }
+
+    @Override
+    public User getUserByIdEnd(Long s) {
+        return userDao.getFirstByIdAfter(s);
+    }
 }
