@@ -4,9 +4,9 @@ server:
 spring:
   datasource:
     name: test
-    url: jdbc:mysql://localhost:3306/zxf?serverTimezone=UTC
+    url: jdbc:mysql://193.112.86.154:3306/zxf?serverTimezone=UTC
     username: root
-    password: root
+    password: .666.
 
     # 使用druid数据源
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -25,10 +25,10 @@ spring:
     maxOpenPreparedStatements: 20
 
   redis:
-    host: 192.168.1.69
+    host: 193.112.86.154
     port: 6379
     timeout: 3000
-    password: ycredis
+    password: .777.
     pool:
       minIdle: 1
       maxIdle: 10
@@ -39,7 +39,7 @@ spring:
     show-sql: true
 
   rabbitmq:
-    host: 192.168.1.69
+    host: 193.112.86.154
     port: 5672
     username: admin
     password: 123456
