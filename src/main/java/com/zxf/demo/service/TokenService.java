@@ -10,7 +10,7 @@ import java.util.Date;
 /**
  * @author zxf
  */
-@Service
+@Service(value = "simpleTokenService")
 public class TokenService {
     public String getToken(User user){
         Date start = new Date();
